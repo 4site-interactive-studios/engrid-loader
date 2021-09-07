@@ -144,7 +144,7 @@ function engridLoaderValidateURL(url) {
  */
 
 // Currently only a log setting of "console" is supported; otherwise, nothing is reported
-var engrid_loader_console_log_style = engridLoaderOption('log_style', 'background: #381D2A; color: #ffffff; font-weight: 400; font-size: 14px; padding: 1px; font-family: monospace;');
+var engrid_loader_console_log_style = engridLoaderOption('log-style', 'background: #381D2A; color: #ffffff; font-weight: 400; font-size: 14px; padding: 1px; font-family: monospace;');
 var engrid_loader_log = engridLoaderOption('log');
 
 // Fetch the desired repo, assets location, and override JS/CSS 
