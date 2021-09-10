@@ -66,7 +66,7 @@ function engridLoaderOption(option_key, default_value) {
 // Returns nothing
 function engridLoaderInsertCSS(engrid_css_url) {
 	if(engridLoaderValidateURL(engrid_css_url)) {
-		var engrid_css_element = document.getElementById('engrid-css');
+		var engrid_css_element = document.querySelector('link[data-engrid-css]');
 		if(engrid_css_element) {
 			engrid_css_element.disabled = true;
 			engridLoaderLog('engridLoaderInsertCSS', 'Disabled existing engrid CSS.');
@@ -155,6 +155,7 @@ var engrid_js_url = '';
 var engrid_css_url = '';
 var engrid_en_assets_url = engridLoaderOption('en-assets-url');
 
+
 // Trim off the trailing forward slash from the engrid_en_assets_url if it exists
 if(engrid_en_assets_url.charAt(engrid_en_assets_url.length-1) === '/') {
 	engrid_en_assets_url = engrid_en_assets_url.slice(0,-1);
@@ -184,7 +185,7 @@ if(engrid_assets === 'local') {
 	}
 
 	engrid_css_url = engridLoaderOption('css');
-	if(!engrid_css_url && !document.getElementById('engrid-css')) {
+	if(!engrid_css_url && !document.querySelector('link[data-engrid-css]')) {
 		engrid_css_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.css' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.css';
 	}
 
