@@ -2,7 +2,7 @@
 
 ## Available loader parameters
 
-* log-style : provides console log styling
+* log-style : provides console log styling; defaults to: "background: #381D2A; color: #ffffff; font-weight: 400; font-size: 14px; padding: 1px; font-family: monospace;"
 * log : if set, the script logs its activity; currently only supports "console"
 * repo-name : used in generating URLs to the github CDN if "assets" is provided
 * repo-owner : used in generating URLs to the github CDN if "assets" is provided
@@ -16,7 +16,11 @@
 * query string key in the format: engrid-*=value
 * loader script-tag data attribute in the format: data-*=value
 * window.engrid_loader object properties in the format: *: value
-  
+
+
+## Misc configuration
+* Loader also supports special query string key/value of &debug=true which is an alternative way to enable console logging; implemented to mirror current capabilities of engrid-scripts
+
   
 ## Some example configurations of loader by URL
 
@@ -43,5 +47,6 @@ It is recommended that the <script> tag be provided with defaults in the form of
 <script src="https://some-domain.com/path/to/loader.js" data-repo-owner="4site-interactive-studios" data-repo-name="engrid-xxxx" data-en-assets-url="https://xxxxxxxxxxx.ssl.cf5.rackcdn.com/xxxx/" data-engrid-loader-js></script>
 ```
 
-  
-  
+
+## Authorized Domains
+Note that there is an authorized_domains array that whitelists which domains can be set.  This is to prevent abuse by non-authorized persons passing along EN pages with malicious script loads.
