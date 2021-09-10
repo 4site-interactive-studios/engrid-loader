@@ -145,7 +145,8 @@ function engridLoaderValidateURL(url) {
 
 // Currently only a log setting of "console" is supported; otherwise, nothing is reported
 var engrid_loader_console_log_style = engridLoaderOption('log-style', 'background: #381D2A; color: #ffffff; font-weight: 400; font-size: 14px; padding: 1px; font-family: monospace;');
-var engrid_loader_log = engridLoaderOption('log');
+// ENGrid makes use of "debug=true" to enable debug; add that shortcut to engrid-loader, as well
+var engrid_loader_log = (engridLoaderGetParameter('debug') == 'true') ? 'console' : engridLoaderOption('log');
 
 // Fetch the desired repo, assets location, and override JS/CSS 
 var engrid_repo = engridLoaderOption('repo-name');
