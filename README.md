@@ -1,5 +1,10 @@
 # engrid-loader
 
+## Overview
+
+Loads the ENGrid script & stylesheet (optional) dynamically.  "npm run build" requires node 14+, due to requirements of NPM package, "minify".
+
+
 ## Available loader parameters
 
 * log-style : provides console log styling; defaults to: "background: #381D2A; color: #ffffff; font-weight: 400; font-size: 14px; padding: 1px; font-family: monospace;"

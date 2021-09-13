@@ -171,8 +171,8 @@ if(engrid_assets === 'local') {
 } else if(engrid_assets === 'flush' && engrid_en_assets_url) {
 
 	var timestamp = Date.now();
-	engrid_js_url = engrid_en_assets_url + '/engrid.js?flush=' + timestamp;
-	engrid_css_url = engrid_en_assets_url + '/engrid.css?flush=' + timestamp;
+	engrid_js_url = engrid_en_assets_url + '/engrid.min.js?flush=' + timestamp;
+	engrid_css_url = engrid_en_assets_url + '/engrid.min.css?flush=' + timestamp;
 
 } else if(engrid_assets && engrid_assets !== 'flush') {
 
@@ -180,14 +180,15 @@ if(engrid_assets === 'local') {
 	engrid_css_url = 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@' + engrid_assets + '/dist/engrid.css';
 
 } else {
+
 	engrid_js_url = engridLoaderOption('js');
 	if(!engrid_js_url) {
-		engrid_js_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.js' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.js';
+		engrid_js_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.min.js' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.js';
 	}
 
 	engrid_css_url = engridLoaderOption('css');
 	if(!engrid_css_url && !document.querySelector('link[data-engrid-css]')) {
-		engrid_css_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.css' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.css';
+		engrid_css_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.min.css' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.css';
 	}
 
 }

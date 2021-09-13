@@ -1,0 +1,27 @@
+{
+  "name": "engrid-loader",
+  "version": "1.0.0",
+  "description": "Loads the ENGrid script & stylesheet dynamically.  \"npm run build\" requires node 14+.",
+  "main": "loader.js",
+  "scripts": {
+    "build": "minify loader.js > loader.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4site-interactive-studios/engrid-loader.git"
+  },
+  "keywords": [
+    "engrid",
+    "loader"
+  ],
+  "author": "michaelw@4sitestudios.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4site-interactive-studios/engrid-loader/issues"
+  },
+  "homepage": "https://github.com/4site-interactive-studios/engrid-loader#readme",
+  "dependencies": {
+    "minify": "^7.0.2"
+  }
+}
