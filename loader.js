@@ -90,7 +90,8 @@ function engridLoaderInsertJS(engrid_js_url) {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
 		script.src = engrid_js_url;
-		document.querySelector('body').appendChild(script);	
+		script.async = true;
+		document.querySelector('head').appendChild(script);	
 		engridLoaderLog('engridLoaderInsertJS', 'Appended script: ' + engrid_js_url);
 	}
 }
