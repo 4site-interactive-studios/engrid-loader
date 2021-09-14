@@ -1,7 +1,7 @@
 {
   "name": "engrid-loader",
   "version": "1.0.0",
-  "description": "Loads the ENGrid script & stylesheet dynamically.  \"npm run build\" requires node 14+.",
+  "description": "Loads the ENGrid script & stylesheet dynamically.",
   "main": "loader.js",
   "scripts": {
     "build": "uglifyjs -o loader.min.js --compress --mangle -- loader.js",
