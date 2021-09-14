@@ -4,7 +4,7 @@
   "description": "Loads the ENGrid script & stylesheet dynamically.  \"npm run build\" requires node 14+.",
   "main": "loader.js",
   "scripts": {
-    "build": "minify loader.js > loader.min.js",
+    "build": "uglifyjs -o loader.min.js --compress --mangle -- loader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/4site-interactive-studios/engrid-loader#readme",
   "dependencies": {
-    "minify": "^7.0.2"
+    "uglify-js": "^3.14.2"
   }
 }

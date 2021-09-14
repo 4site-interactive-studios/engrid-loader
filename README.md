@@ -2,7 +2,7 @@
 
 ## Overview
 
-Loads the ENGrid script & stylesheet (optional) dynamically.  "npm run build" requires node 14+, due to requirements of NPM package, "minify".
+Loads the ENGrid script & stylesheet (optional) dynamically.  Rebuild the minified file via "npm run build"
 
 
 ## Available loader parameters
@@ -12,8 +12,6 @@ Loads the ENGrid script & stylesheet (optional) dynamically.  "npm run build" re
 * repo-name : used in generating URLs to the github CDN if "assets" is provided
 * repo-owner : used in generating URLs to the github CDN if "assets" is provided
 * assets : used in controlling what JS/CSS is loaded; can be "local", "flush", or any github branch for the repo
-* js : URL to a JS file that is explicitly loaded; is not used if assets is set
-* css : URL to a CSS file that is explicitly loaded; is not used if assets is set
 * en-assets-url : URL to the Engaging Networks CDN for the account
 
 
