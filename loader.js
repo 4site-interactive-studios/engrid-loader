@@ -181,12 +181,10 @@ if(engrid_assets === 'local') {
 
 } else {
 
-	engrid_js_url = engridLoaderOption('js');
 	if(!engrid_js_url) {
 		engrid_js_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.min.js' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.js';
 	}
 
-	engrid_css_url = engridLoaderOption('css');
 	if(!engrid_css_url && !document.querySelector('link[data-engrid-css]')) {
 		engrid_css_url = (engrid_en_assets_url) ? engrid_en_assets_url + '/engrid.min.css' : 'https://cdn.jsdelivr.net/gh/' + engrid_repo_owner + '/' + engrid_repo + '@main/dist/engrid.css';
 	}
