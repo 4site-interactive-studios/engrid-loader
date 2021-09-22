@@ -28,7 +28,6 @@ Loads the ENGrid script & stylesheet (optional) dynamically.  Rebuild the minifi
 ## Some example configurations of loader by URL
 
 * https://some-engaging-networks-domain.com/page/12345/donate/1?mode=DEMO&engrid-log=console&engrid-assets=some-branch
-* https://some-engaging-networks-domain.com/page/12345/donate/1?mode=DEMO&engrid-log=console&engrid-js=https://some-other-domain.com/engrid.js&engrid-css=https://some-other-domain.com/engrid.css
 * https://some-engaging-networks-domain.com/page/12345/donate/1?mode=DEMO&engrid-log=console&engrid-repo-name=some-repo&engrid-repo-owner=some-authorized-repo-owner&engrid-assets=main
 
 ## CSS requirement
@@ -37,7 +36,7 @@ If you include the CSS <link> in the default template, add id="engrid-css" so th
 
 ```html
 <!-- Load ENGrid's CSS here so that it always comes after Engaging Networks CSS which gets injected into <head> -->
-<link href="https://xxxxxxxxxxx.ssl.cf5.rackcdn.com/xxxx/engrid.css" rel="stylesheet" type="text/css" id="engrid-css">
+<link href="https://xxxxxxxxxxx.ssl.cf5.rackcdn.com/xxxx/engrid.css" rel="stylesheet" type="text/css" data-engrid-css>
 ```
 
 ## Loader <script> tag requirements
